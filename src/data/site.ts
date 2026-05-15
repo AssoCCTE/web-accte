@@ -1,6 +1,12 @@
 export const site = {
   name: "ACCTE",
   tagline: "Convention citoyenne sur les temps de l'enfant",
+  logo: {
+    src: "/logo.png",
+    alt: "Association de la Convention Citoyenne sur les temps de l'enfant",
+    width: 353,
+    height: 120,
+  },
   fullName:
     "Association de la Convention Citoyenne sur les Temps de l'Enfant",
   contactEmail: "contact@accte.org",

@@ -1,11 +1,14 @@
 :root {
-  color-scheme: light dark;
-  --background: #f7f4ef;
-  --foreground: #191612;
-  --muted: #625a51;
-  --surface: #fffaf2;
-  --accent: #8a4f2b;
-  --accent-contrast: #fff8ef;
+  color-scheme: light;
+  /* Charte ACCTE — voir docs/charte-graphique.md */
+  --background: #ffffff;
+  --foreground: #001d4a; /* Bleu Marine Institutionnel */
+  --muted: #3d5a73;
+  --surface: #f0f9fd;
+  --accent: #d81b60; /* Rose Magenta */
+  --accent-green: #4a7c44; /* Vert Feuillage */
+  --accent-sky: #81d4fa; /* Bleu Ciel */
+  --accent-contrast: #ffffff;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -19,7 +22,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(138, 79, 43, 0.18), transparent 34rem),
+    radial-gradient(circle at top left, rgba(129, 212, 250, 0.35), transparent 34rem),
     var(--background);
   color: var(--foreground);
   line-height: 1.5;
@@ -50,15 +53,4 @@ h3 {
   color: var(--muted);
   font-size: clamp(1.05rem, 2vw, 1.2rem);
   line-height: 1.7;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #14110f;
-    --foreground: #fff8ef;
-    --muted: #cfc2b3;
-    --surface: #211b17;
-    --accent: #f0a76a;
-    --accent-contrast: #20120a;
-  }
 }

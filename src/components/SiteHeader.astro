@@ -9,8 +9,13 @@ const { pathname } = Astro.url;
 <header class="site-header">
   <div class="site-header__inner">
     <a class="site-brand" href="/">
-      <span class="site-brand__name">{site.name}</span>
-      <span class="site-brand__tagline">{site.tagline}</span>
+      <img
+        src={site.logo.src}
+        alt={site.logo.alt}
+        width={site.logo.width}
+        height={site.logo.height}
+        loading="eager"
+      />
     </a>
 
     <nav class="site-nav" aria-label="Navigation principale">

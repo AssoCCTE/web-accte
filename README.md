@@ -28,6 +28,12 @@ yarn build
 yarn preview
 ```
 
+## Charte graphique
+
+Couleurs, logos et règles d’usage : [docs/charte-graphique.md](docs/charte-graphique.md).
+
+Assets dans `public/` : `logo.png` (header), `favicon.png` (onglet).
+
 ## Principes
 
 - Rendu statique avec Astro (`output: "static"`).

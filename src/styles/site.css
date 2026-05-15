@@ -51,21 +51,22 @@
 }
 
 .site-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  display: block;
   text-decoration: none;
+  line-height: 0;
 }
 
-.site-brand__name {
-  font-size: 1.35rem;
-  font-weight: 800;
-  letter-spacing: -0.04em;
+.site-brand img {
+  display: block;
+  width: auto;
+  max-height: 3rem;
+  object-fit: contain;
 }
 
-.site-brand__tagline {
-  color: var(--muted);
-  font-size: 0.85rem;
+@media (max-width: 30rem) {
+  .site-brand img {
+    max-height: 2.5rem;
+  }
 }
 
 .site-nav__list {
@@ -140,7 +141,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
 }
 
 .site-footer__link {
@@ -184,8 +185,8 @@
   padding: clamp(2rem, 5vw, 3.5rem);
   border: 1px solid color-mix(in srgb, var(--foreground) 14%, transparent);
   border-radius: 1.5rem;
-  background: color-mix(in srgb, var(--surface) 88%, transparent);
-  box-shadow: 0 1.5rem 4rem rgba(25, 22, 18, 0.08);
+  background: color-mix(in srgb, var(--accent-sky) 20%, var(--surface));
+  box-shadow: 0 1.5rem 4rem rgba(0, 29, 74, 0.08);
 }
 
 .hero h1 {
@@ -212,7 +213,7 @@
   padding: 1.5rem;
   border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  background: color-mix(in srgb, var(--accent-sky) 15%, var(--surface));
 }
 
 .highlight-card h3 {
@@ -245,7 +246,7 @@
   padding: 1.5rem;
   border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  background: color-mix(in srgb, var(--accent-sky) 15%, var(--surface));
   text-decoration: none;
   transition: border-color 0.15s ease, transform 0.15s ease;
 }
@@ -275,6 +276,7 @@
   margin: 0 0 1rem;
   font-size: 1.5rem;
   letter-spacing: -0.03em;
+  color: var(--accent);
 }
 
 .content-section p {
@@ -286,6 +288,18 @@
 
 .content-section p:last-child {
   margin-bottom: 0;
+}
+
+.content-section ul {
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+  max-width: 42rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.content-section ul li::marker {
+  color: var(--accent-green);
 }
 
 .values-grid,
@@ -306,7 +320,7 @@
   padding: 1.5rem;
   border: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent);
   border-radius: 1rem;
-  background: color-mix(in srgb, var(--surface) 60%, transparent);
+  background: color-mix(in srgb, var(--accent-sky) 15%, var(--surface));
 }
 
 .value-card h3,
@@ -329,10 +343,4 @@
   background: color-mix(in srgb, var(--accent) 12%, transparent);
   color: var(--muted);
   line-height: 1.65;
-}
-
-@media (prefers-color-scheme: dark) {
-  .hero {
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  }
 }

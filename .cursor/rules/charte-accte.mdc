@@ -1,0 +1,24 @@
+---
+description: Charte graphique ACCTE — couleurs, logos, conventions UI
+alwaysApply: true
+---
+
+# Charte ACCTE (web)
+
+Couleurs officielles uniquement :
+
+- Rose Magenta `#D81B60` → `--accent` (rubriques, nav active, eyebrow)
+- Vert Feuillage `#4A7C44` → `--accent-green` (puces listes)
+- Bleu Ciel `#81D4FA` → `--accent-sky` (fonds, dégradés)
+- Bleu Marine `#001D4A` → `--foreground` (texte principal)
+
+Assets : `/logo.png` (header, logo seul), `/favicon.png` (onglet).
+
+Règles :
+
+- Header = image logo uniquement (pas de texte ACCTE/tagline à côté).
+- Mode clair uniquement ; pas de `@media (prefers-color-scheme: dark)`.
+- Pas de palette marron legacy ; pas de hex en dur dans les composants.
+- Tokens dans `src/styles/global.css` ; config logo dans `src/data/site.ts`.
+
+Référence complète : `docs/charte-graphique.md`.
