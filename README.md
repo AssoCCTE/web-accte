@@ -4,11 +4,13 @@ Site statique de l'**ACCTE** — Association de la Convention Citoyenne sur les 
 
 ## Pages
 
-| Route | Fichier |
-|-------|---------|
-| `/` | `src/pages/index.astro` |
+
+| Route           | Fichier                       |
+| --------------- | ----------------------------- |
+| `/`             | `src/pages/index.astro`       |
 | `/association/` | `src/pages/association.astro` |
-| `/membres/` | `src/pages/membres.astro` |
+| `/membres/`     | `src/pages/membres.astro`     |
+
 
 ## Contenus provisoires
 
@@ -39,3 +41,4 @@ Assets dans `public/` : `logo.png` (header), `favicon.png` (onglet).
 - Rendu statique avec Astro (`output: "static"`).
 - Aucun framework JavaScript côté client.
 - Header, footer et navigation partagés via `PageLayout.astro`.
+
