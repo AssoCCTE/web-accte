@@ -1,17 +1,38 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import { homePage } from "../data/home";
 ---
 
-<BaseLayout title="Web ACCTE">
-  <main class="page-shell">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">Astro minimal</p>
-      <h1 id="hero-title">Un site statique, rapide et sans framework JavaScript.</h1>
-      <p class="intro">
-        Cette base privilégie le HTML généré au build, le CSS simple et aucun
-        JavaScript côté client par défaut.
-      </p>
-      <a class="button" href="https://astro.build" rel="noreferrer">Découvrir Astro</a>
-    </section>
-  </main>
-</BaseLayout>
+<PageLayout description={homePage.description} title={homePage.title}>
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="eyebrow">{homePage.hero.eyebrow}</p>
+    <h1 id="hero-title">{homePage.hero.title}</h1>
+    <p class="intro">{homePage.hero.intro}</p>
+  </section>
+
+  <section class="highlights" aria-labelledby="highlights-title">
+    <h2 id="highlights-title" class="visually-hidden">En bref</h2>
+    {
+      homePage.highlights.map((item) => (
+        <article class="highlight-card">
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+        </article>
+      ))
+    }
+  </section>
+
+  <section aria-labelledby="discover-title">
+    <h2 id="discover-title">Découvrir</h2>
+    <div class="quick-links">
+      {
+        homePage.quickLinks.map((link) => (
+          <a class="quick-link-card" href={link.href}>
+            <h3>{link.label}</h3>
+            <p>{link.description}</p>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

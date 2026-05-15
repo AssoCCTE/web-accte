@@ -1,0 +1,42 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { membresPage } from "../data/membres";
+---
+
+<PageLayout description={membresPage.description} title={membresPage.title}>
+  <header class="page-header">
+    <h1>{membresPage.title}</h1>
+    <p class="page-header__lead">{membresPage.description}</p>
+  </header>
+
+  <section
+    class="content-section"
+    id="introduction"
+    aria-labelledby="introduction-title"
+  >
+    <h2 id="introduction-title">{membresPage.introduction.title}</h2>
+    {membresPage.introduction.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  </section>
+
+  <section
+    class="content-section"
+    id="profils"
+    aria-labelledby="profils-title"
+  >
+    <h2 id="profils-title">Profil des participant·es</h2>
+    <div class="profiles-grid">
+      {
+        membresPage.profiles.map((profile) => (
+          <article class="profile-card">
+            <h3>{profile.title}</h3>
+            <p>{profile.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <aside class="note-box" aria-label="Note">
+    <p>{membresPage.note}</p>
+  </aside>
+</PageLayout>

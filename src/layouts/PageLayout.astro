@@ -1,0 +1,24 @@
+---
+import SiteFooter from "../components/SiteFooter.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import { site } from "../data/site";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  description?: string;
+  title: string;
+}
+
+const { description, title } = Astro.props;
+const pageTitle = title === "Accueil" ? site.name : `${title} — ${site.name}`;
+---
+
+<BaseLayout description={description} title={pageTitle}>
+  <div class="site-shell">
+    <SiteHeader />
+    <main class="site-main" id="main-content">
+      <slot />
+    </main>
+    <SiteFooter />
+  </div>
+</BaseLayout>

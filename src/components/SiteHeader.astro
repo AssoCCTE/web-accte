@@ -1,0 +1,37 @@
+---
+import { isActiveNav, site } from "../data/site";
+
+const { pathname } = Astro.url;
+---
+
+<a class="skip-link" href="#main-content">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="/">
+      <span class="site-brand__name">{site.name}</span>
+      <span class="site-brand__tagline">{site.tagline}</span>
+    </a>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+      <ul class="site-nav__list">
+        {
+          site.nav.map((item) => (
+            <li>
+              <a
+                class:list={[
+                  "site-nav__link",
+                  { "is-active": isActiveNav(item.href, pathname) },
+                ]}
+                href={item.href}
+                aria-current={isActiveNav(item.href, pathname) ? "page" : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

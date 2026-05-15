@@ -1,0 +1,45 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { associationPage } from "../data/association";
+---
+
+<PageLayout
+  description={associationPage.description}
+  title={associationPage.title}
+>
+  <header class="page-header">
+    <h1>{associationPage.title}</h1>
+    <p class="page-header__lead">{associationPage.description}</p>
+  </header>
+
+  {
+    associationPage.sections.map((section) =>
+      "items" in section ? (
+        <section
+          class="content-section"
+          id={section.id}
+          aria-labelledby={`${section.id}-title`}
+        >
+          <h2 id={`${section.id}-title`}>{section.title}</h2>
+          <div class="values-grid">
+            {section.items.map((item) => (
+              <article class="value-card">
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      ) : (
+        <section
+          class="content-section"
+          id={section.id}
+          aria-labelledby={`${section.id}-title`}
+        >
+          <h2 id={`${section.id}-title`}>{section.title}</h2>
+          {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        </section>
+      ),
+    )
+  }
+</PageLayout>
