@@ -1,0 +1,37 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { rapportPage } from "../data/rapport";
+---
+
+<PageLayout description={rapportPage.description} title={rapportPage.title}>
+  <header class="page-header">
+    <h1>{rapportPage.title}</h1>
+    <p class="page-header__lead">{rapportPage.description}</p>
+  </header>
+
+  {
+    rapportPage.sections.map((section) => (
+      <section
+        class="content-section"
+        id={section.id}
+        aria-labelledby={`${section.id}-title`}
+      >
+        <h2 id={`${section.id}-title`}>{section.title}</h2>
+        {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        {"links" in section &&
+          section.links?.map((link) => (
+            <p>
+              <a
+                class="content-link"
+                href={link.href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {link.label}
+              </a>
+            </p>
+          ))}
+      </section>
+    ))
+  }
+</PageLayout>

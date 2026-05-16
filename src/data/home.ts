@@ -29,6 +29,11 @@ export const homePage = {
       description: "Mission, contexte et valeurs de l'ACCTE.",
     },
     {
+      label: "Rapport citoyen",
+      href: "/rapport/",
+      description: "Rapport de la convention citoyenne avec synthèse et vidéo de présentation.",
+    },
+    {
       label: "Les membres",
       href: "/membres/",
       description: "Le profil des participant·es à la convention.",
