@@ -48,12 +48,17 @@ Configuration centralisée dans `[src/data/site.ts](../src/data/site.ts)` (`site
 - **Couleurs** : utiliser les variables CSS, pas la palette marron legacy (`#8a4f2b`).
 - **Favicon** : pictogramme seul, pas le logo horizontal recadré.
 
+## Icônes footer
+
+Icônes monochromes (email, LinkedIn, Instagram) dans `src/components/icons/`, couleur via `currentColor` / `--foreground` sur les liens du footer.
+
 ## Fichiers à modifier pour l’identité visuelle
 
 - `src/styles/global.css` — tokens
 - `src/styles/site.css` — composants et pages
 - `src/data/site.ts` — chemins logo
 - `src/components/SiteHeader.astro` — affichage logo
+- `src/components/SiteFooter.astro` — liens contact et réseaux
 - `src/layouts/BaseLayout.astro` — favicon
 - `public/logo.png`, `public/favicon.png` — assets
 

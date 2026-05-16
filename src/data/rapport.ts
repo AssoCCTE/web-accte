@@ -17,10 +17,14 @@ export const rapportPage = {
       paragraphs: [
         "Une présentation du rapport a été diffusée sur YouTube pour en restituer les grandes lignes.",
       ],
+      embed: {
+        src: "https://www.youtube.com/embed/wOgXeZP4ei0?si=szkTJvbNRl70DTpc",
+        title: "Présentation du rapport citoyen sur YouTube",
+      },
       links: [
         {
           label: "Voir la vidéo de présentation du rapport (YouTube)",
-          href: "https://www.youtube.com/live/wOgXeZP4ei0",
+          href: "https://www.youtube.com/watch?v=wOgXeZP4ei0",
         },
       ],
     },

@@ -18,6 +18,18 @@ import { rapportPage } from "../data/rapport";
       >
         <h2 id={`${section.id}-title`}>{section.title}</h2>
         {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        {"embed" in section && section.embed && (
+          <figure class="video-embed">
+            <iframe
+              src={section.embed.src}
+              title={section.embed.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            />
+          </figure>
+        )}
         {"links" in section &&
           section.links?.map((link) => (
             <p>

@@ -1,4 +1,7 @@
 ---
+import IconEmail from "./icons/IconEmail.astro";
+import IconInstagram from "./icons/IconInstagram.astro";
+import IconLinkedIn from "./icons/IconLinkedIn.astro";
 import { site } from "../data/site";
 
 const year = new Date().getFullYear();
@@ -13,8 +16,12 @@ const year = new Date().getFullYear();
 
     <div class="site-footer__contact">
       <h2 class="site-footer__heading">Contact</h2>
-      <a class="site-footer__link" href={`mailto:${site.contactEmail}`}>
-        {site.contactEmail}
+      <a
+        class="site-footer__link site-footer__link--icon"
+        href={`mailto:${site.contactEmail}`}
+      >
+        <IconEmail />
+        <span>{site.contactEmail}</span>
       </a>
     </div>
 
@@ -23,22 +30,24 @@ const year = new Date().getFullYear();
       <ul class="site-footer__social-list">
         <li>
           <a
-            class="site-footer__link"
+            class="site-footer__link site-footer__link--icon"
             href={site.social.linkedin}
             rel="noopener noreferrer"
             target="_blank"
           >
-            LinkedIn
+            <IconLinkedIn />
+            <span>LinkedIn</span>
           </a>
         </li>
         <li>
           <a
-            class="site-footer__link"
+            class="site-footer__link site-footer__link--icon"
             href={site.social.instagram}
             rel="noopener noreferrer"
             target="_blank"
           >
-            Instagram
+            <IconInstagram />
+            <span>Instagram</span>
           </a>
         </li>
       </ul>
