@@ -290,6 +290,18 @@
   margin-bottom: 0;
 }
 
+.content-link {
+  color: var(--foreground);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.content-link:hover,
+.content-link:focus-visible {
+  color: var(--accent);
+}
+
 .content-section ul {
   margin: 0 0 1rem;
   padding-left: 1.5rem;

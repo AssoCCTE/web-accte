@@ -9,10 +9,10 @@ export const site = {
   },
   fullName:
     "Association de la Convention Citoyenne sur les Temps de l'Enfant",
-  contactEmail: "contact@accte.org",
+  contactEmail: "ccte.asso@gmail.com",
   social: {
-    linkedin: "https://www.linkedin.com/company/accte",
-    instagram: "https://www.instagram.com/accte",
+    linkedin: "https://www.linkedin.com/company/ccte-asso",
+    instagram: "https://www.instagram.com/association_ccte",
   },
   nav: [
     { label: "Accueil", href: "/" },

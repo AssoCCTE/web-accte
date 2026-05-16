@@ -38,6 +38,19 @@ import { associationPage } from "../data/association";
         >
           <h2 id={`${section.id}-title`}>{section.title}</h2>
           {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          {"links" in section &&
+            section.links?.map((link) => (
+              <p>
+                <a
+                  class="content-link"
+                  href={link.href}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {link.label}
+                </a>
+              </p>
+            ))}
         </section>
       ),
     )

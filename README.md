@@ -36,6 +36,8 @@ Couleurs, logos et règles d’usage : [docs/charte-graphique.md](docs/charte-gr
 
 Assets dans `public/` : `logo.png` (header), `favicon.png` (onglet).
 
+Documents publics (PDF, etc.) : les fichiers placés dans `public/documents/` sont servés tels quels à l’URL `/documents/<nom-du-fichier>` (ex. statuts de l’association référencés depuis `src/data/association.ts`). Après remplacement d’un PDF, mettre à jour le texte du lien dans les données si la taille du fichier change.
+
 ## Principes
 
 - Rendu statique avec Astro (`output: "static"`).

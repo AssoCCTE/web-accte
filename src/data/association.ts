@@ -29,6 +29,19 @@ export const associationPage = {
       ],
     },
     {
+      id: "statuts",
+      title: "Statuts de l'association",
+      paragraphs: [
+        "Les statuts précisent l'objet, le fonctionnement et les règles de vie de l'association.",
+      ],
+      links: [
+        {
+          label: "Consulter les statuts (PDF, 137 ko)",
+          href: "/documents/statuts-association-accte.pdf",
+        },
+      ],
+    },
+    {
       id: "valeurs",
       title: "Nos valeurs",
       items: [
