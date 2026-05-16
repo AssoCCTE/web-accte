@@ -18,6 +18,21 @@ import { membresPage } from "../data/membres";
     {membresPage.introduction.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
   </section>
 
+  <figure class="group-photo">
+    <img
+      src={membresPage.groupPhoto.src}
+      alt={membresPage.groupPhoto.alt}
+      width={membresPage.groupPhoto.width}
+      height={membresPage.groupPhoto.height}
+      loading="lazy"
+      decoding="async"
+    />
+    <figcaption>
+      <span class="group-photo__caption">{membresPage.groupPhoto.caption}</span>
+      <span class="group-photo__credit">{membresPage.groupPhoto.credit}</span>
+    </figcaption>
+  </figure>
+
   <section
     class="content-section"
     id="profils"

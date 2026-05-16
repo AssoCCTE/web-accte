@@ -10,6 +10,17 @@ import { homePage } from "../data/home";
     <p class="intro">{homePage.hero.intro}</p>
   </section>
 
+  <section
+    class="content-section manifeste"
+    id="manifeste"
+    aria-labelledby="manifeste-title"
+  >
+    <p class="eyebrow">{homePage.manifeste.eyebrow}</p>
+    <h2 id="manifeste-title">{homePage.manifeste.title}</h2>
+    {homePage.manifeste.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+    <p class="manifeste__conclusion">{homePage.manifeste.conclusion}</p>
+  </section>
+
   <section class="highlights" aria-labelledby="highlights-title">
     <h2 id="highlights-title" class="visually-hidden">En bref</h2>
     {

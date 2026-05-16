@@ -10,6 +10,15 @@ export const membresPage = {
       "Cette page présente le profil générique de ces participant·es — une diversité de parcours unie par un engagement commun.",
     ],
   },
+  groupPhoto: {
+    src: "/images/photo-groupe-citoyens.jpg",
+    alt: "Groupe des participant·es de la Convention citoyenne sur les temps de l'enfant, réunis au palais d'Iéna.",
+    caption:
+      "Les citoyen·nes participant·es à la Convention citoyenne sur les temps de l'enfant.",
+    credit: "Crédits Katrin Baumann CESE",
+    width: 1024,
+    height: 807,
+  },
   profiles: [
     {
       title: "Diversité des parcours",

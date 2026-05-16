@@ -17,7 +17,7 @@ export const site = {
   nav: [
     { label: "Accueil", href: "/" },
     { label: "L'association", href: "/association/" },
-    { label: "Rapport citoyen", href: "/rapport/" },
+    { label: "Le rapport citoyen", href: "/rapport/" },
     { label: "Les membres", href: "/membres/" },
   ],
 } as const;

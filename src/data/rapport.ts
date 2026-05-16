@@ -1,5 +1,5 @@
 export const rapportPage = {
-  title: "Rapport citoyen",
+  title: "Le rapport citoyen",
   description:
     "Le rapport de la Convention citoyenne sur les temps de l'enfant : travaux, propositions et ressources pour le consulter.",
   sections: [
