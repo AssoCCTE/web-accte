@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { membresPage } from "../data/membres";
+import { withBase } from "../utils/withBase";
 ---
 
 <PageLayout description={membresPage.description} title={membresPage.title}>
@@ -20,7 +21,7 @@ import { membresPage } from "../data/membres";
 
   <figure class="group-photo">
     <img
-      src={membresPage.groupPhoto.src}
+      src={withBase(membresPage.groupPhoto.src)}
       alt={membresPage.groupPhoto.alt}
       width={membresPage.groupPhoto.width}
       height={membresPage.groupPhoto.height}

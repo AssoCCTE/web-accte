@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { homePage } from "../data/home";
+import { withBase } from "../utils/withBase";
 ---
 
 <PageLayout description={homePage.description} title={homePage.title}>
@@ -38,7 +39,7 @@ import { homePage } from "../data/home";
     <div class="quick-links">
       {
         homePage.quickLinks.map((link) => (
-          <a class="quick-link-card" href={link.href}>
+          <a class="quick-link-card" href={withBase(link.href)}>
             <h3>{link.label}</h3>
             <p>{link.description}</p>
           </a>

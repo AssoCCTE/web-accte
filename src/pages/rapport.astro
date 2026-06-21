@@ -1,6 +1,7 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { rapportPage } from "../data/rapport";
+import { withBase } from "../utils/withBase";
 ---
 
 <PageLayout description={rapportPage.description} title={rapportPage.title}>
@@ -35,7 +36,7 @@ import { rapportPage } from "../data/rapport";
             <p>
               <a
                 class="content-link"
-                href={link.href}
+                href={withBase(link.href)}
                 rel="noopener noreferrer"
                 target="_blank"
               >

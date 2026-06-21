@@ -1,5 +1,6 @@
 ---
 import { isActiveNav, site } from "../data/site";
+import { withBase } from "../utils/withBase";
 
 const { pathname } = Astro.url;
 ---
@@ -8,9 +9,9 @@ const { pathname } = Astro.url;
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a class="site-brand" href="/">
+    <a class="site-brand" href={withBase("/")}>
       <img
-        src={site.logo.src}
+        src={withBase(site.logo.src)}
         alt={site.logo.alt}
         width={site.logo.width}
         height={site.logo.height}
@@ -28,7 +29,7 @@ const { pathname } = Astro.url;
                   "site-nav__link",
                   { "is-active": isActiveNav(item.href, pathname) },
                 ]}
-                href={item.href}
+                href={withBase(item.href)}
                 aria-current={isActiveNav(item.href, pathname) ? "page" : undefined}
               >
                 {item.label}
