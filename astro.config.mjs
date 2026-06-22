@@ -2,6 +2,6 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   output: "static",
-  base: "/web-accte",
-  trailingSlash: 'always',
+  site: "https://www.accte.org",
+  trailingSlash: "always",
 });
