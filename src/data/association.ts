@@ -7,7 +7,7 @@ export const associationPage = {
       id: "qui-sommes-nous",
       title: "Qui sommes-nous ?",
       paragraphs: [
-        "L'ACCTE — Association de la Convention Citoyenne sur les Temps de l'Enfant — rassemble les personnes engagées autour des conclusions et de la continuité des travaux de la convention.",
+        "L'ACCTE — Association de la Convention Citoyenne sur les Temps de l'Enfant — rassemble les personnes engagées autour des conclusions et de la continuité des travaux de la convention. L'ACCTE est une association loi 1901, enregistrée au Répertoire National des Associations (RNA) sous le numéro RNA W784012105. Le siège social de l’association est fixé au 61 rue des prés aux Bois, 78000 Versailles.",
         "Notre rôle est de faire vivre une démarche citoyenne exigeante, accessible et utile pour repenser les temps de l'enfant au quotidien.",
       ],
     },
